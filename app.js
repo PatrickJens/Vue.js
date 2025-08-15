@@ -2,12 +2,19 @@ console.log("running...");
 
 /* Vue.js */
 
-  const { createApp } = Vue
-
-  createApp({
+  const app = Vue.createApp({
     data() {
       return {
-        message: 'Hello Vue!'
+        title: 'Final Empire',
+        author: 'Brandon Sanderson',
+        age: 45,
+        showBooks: true
+      }
+    },
+    methods:{
+      toggleShowBooks() {
+        this.showBooks = !this.showBooks
       }
     }
-  }).mount('#comp1')
+  })
+  app.mount('#comp1')
